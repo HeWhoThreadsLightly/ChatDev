@@ -22,6 +22,7 @@ import tiktoken
 
 from camel.messages import OpenAIMessage
 from camel.typing import ModelType, TaskType
+from chatdev import ChatDevGlueModelGlobal
 
 F = TypeVar('F', bound=Callable[..., Any])
 
@@ -122,6 +123,8 @@ def get_model_token_limit(model: ModelType) -> int:
         return 32768
     elif model == ModelType.GPT_4_TURBO:
         return 128000
+    elif model == ModelType.LLM_GLUE:
+        return ChatDevGlueModelGlobal.get().token_limit()
     elif model == ModelType.STUB:
         return 4096
     else:

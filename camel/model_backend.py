@@ -58,7 +58,7 @@ class ModelBackend(ABC):
 
 
 class GlueModelWrapper(ModelBackend):
-    r"""Glue model interface to connect to other LLMGlue components."""
+    r"""Glue model interface to connect to other LLMglue components."""
 
     def __init__(self, model_type: ModelType, model_config_dict: Dict) -> None:
         super().__init__()

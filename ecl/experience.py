@@ -7,7 +7,8 @@ import numpy as np
 from codes import Codes
 from utils import get_easyDict_from_filepath,OpenAIModel,log_and_print_online
 from embedding import OpenAIEmbedding
-sys.path.append(os.path.join(os.getcwd(),"ecl"))
+
+
 class Shortcut:
     def __init__(self, sourceMID, targetMID, valueGain,instructionStar,edgeIDPath):
         self.sourceMID = sourceMID
